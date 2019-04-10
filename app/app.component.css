@@ -1,0 +1,34 @@
+p {
+  font-family: Lato;
+}
+
+.form-group {
+  padding: 10px 0;
+}
+
+.form-group label,
+.form-group input,
+.form-group span {
+  display: block;
+  width: 80%;
+}
+
+.form-group.has-error,
+.form-group.has-error label,
+.form-group.has-error span {
+  color: red;
+}
+
+.form-group.form-group.has-error input {
+  border: 1px solid red;
+}
+
+.form-group.has-success,
+.form-group.has-success label,
+.form-group.has-success span {
+  color: green;
+}
+
+.form-group.form-group.has-success input {
+  border: 1px solid green;
+}

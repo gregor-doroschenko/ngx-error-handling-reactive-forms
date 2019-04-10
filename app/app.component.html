@@ -1,0 +1,25 @@
+<h1>Error Handling for Reactive Forms</h1>
+
+<form [formGroup]="myForm" (onSubmit)="submitForm()">
+  <div class="form-group" 
+       [class.has-error]="errors.name"
+       [class.has-success]="!errors.name && myForm.controls['name'].value">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" required>
+    <span class="help-text" *ngIf="errors.name">{{ errors.name }}</span>
+  </div>
+  <div class="form-group" 
+       [class.has-error]="errors.email"
+       [class.has-success]="!errors.email && myForm.controls['email'].value">
+    <label for="email">Email</label>
+    <input type="text" id="email" formControlName="email" required>
+    <span class="help-text" *ngIf="errors.email">{{ errors.email }}</span>
+  </div>
+  <div class="form-group" 
+       [class.has-error]="errors.password"
+       [class.has-success]="!errors.password && myForm.controls['password'].value">
+    <label for="password">Password</label>
+    <input type="password" id="password" formControlName="password" required>
+    <span class="help-text" *ngIf="errors.password">{{ errors.password }}</span>
+  </div>
+</form>
